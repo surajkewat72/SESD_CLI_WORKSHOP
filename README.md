@@ -1,6 +1,6 @@
 # MyCLI - Command Line Calculator & Utility Tool
 
-A powerful and easy-to-use command-line interface (CLI) tool built with TypeScript that provides mathematical operations, comparisons, and text utilities right from your terminal.
+A powerful and easy-to-use command-line interface (CLI) tool built with TypeScript that provides mathematical operations, comparisons, text utilities, and real-time API integrations right from your terminal.
 
 ## Features
 
@@ -8,8 +8,10 @@ A powerful and easy-to-use command-line interface (CLI) tool built with TypeScri
 - **Advanced Math** - Power, square root, absolute value, and factorial calculations
 - **Comparison Functions** - Find maximum, minimum, and average of numbers
 - **Utility Tools** - Temperature conversion and text reversal
-- **Fast & Lightweight** - No unnecessary dependencies, built with TypeScript
+- **API Integrations** - GitHub user info, real-time weather data, and inspirational quotes
+- **Fast & Lightweight** - Minimal dependencies, built with TypeScript
 - **Error Handling** - Comprehensive validation and helpful error messages
+- **Colorful Output** - Enhanced terminal display with Chalk
 
 ## Installation
 
@@ -166,6 +168,48 @@ mycli reverse <text>
 # Output: Reversed: olleh
 ```
 
+### API Integrations
+
+**GitHub User Information**
+```bash
+mycli github <username>
+# Example: mycli github torvalds
+# Output: Displays user profile including name, bio, repos, followers, etc.
+```
+Fetches real-time GitHub user information including:
+- Name and bio
+- Location
+- Public repositories count
+- Followers and following
+- Profile URL
+
+**Weather Information**
+```bash
+mycli weather <city>
+# Example: mycli weather London
+# Example: mycli weather "New York"
+# Output: Displays current weather conditions with temperature, humidity, wind, etc.
+```
+Fetches current weather data including:
+- Temperature (Celsius and Fahrenheit)
+- Weather condition
+- Humidity and precipitation
+- Wind speed and direction
+- Visibility
+
+**Random Quote Generator**
+```bash
+mycli quote
+# Example: mycli quote
+# Output: Displays a random inspirational quote with author
+
+# With specific tag
+mycli quote --tag wisdom
+mycli quote -t success
+# Output: Displays a quote from the specified category
+```
+Available tags: wisdom, success, life, happiness, friendship, love, motivation, and more.
+
 ## Use Cases
 
 - **Quick Calculations** - Perform math operations without opening a calculator
@@ -178,6 +222,8 @@ mycli reverse <text>
 
 - **TypeScript** - Type-safe JavaScript
 - **Commander.js** - Complete solution for Node.js command-line interfaces
+- **Axios** - Promise-based HTTP client for API requests
+- **Chalk** - Terminal string styling for colorful output
 - **Node.js** - JavaScript runtime
 
 ## Project Structure
